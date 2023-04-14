@@ -22,8 +22,7 @@ let data=[
 ];
 
 
-let main=document.createElement("div");
-main.classList.add("flx");
+let here=document.querySelector(".flx");
 for(let i of data){
     let div=document.createElement("div");
     let head=document.createElement("h1");
@@ -31,13 +30,12 @@ for(let i of data){
 
         head.innerText=i.name;
         para.innerText=i.disc;
-
-        main.append(div);
+        
         div.append(head);
         div.append(para);
         div.className="card";
         div.classList.add("rep");
         
-        
-        document.body.append(div);
+        here.append(div);
+        // document.body.append(div);
 }
